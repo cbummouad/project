@@ -1,0 +1,147 @@
+.app__container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  
+  .app__wrapper {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+    padding: 4rem 2rem;
+  
+    @media screen and (max-width: 450px) {
+      padding: 4rem 1rem 2rem;
+    }
+  }
+  
+  .app__flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  // Social Media Icons Styles
+  .app__social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 2rem;
+    z-index: 2;
+  
+    div {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--white-color);
+      margin: 0.25rem 0;
+      border: 1px solid var(--lightGray-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease-in-out;
+  
+      svg {
+        width: 15px;
+        height: 15px;
+        color: var(--gray-color);
+      }
+  
+      &:hover {
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+  
+        svg {
+          color: var(--white-color);
+        }
+      }
+  
+      @media screen and (min-width: 2000px) {
+        width: 70px;
+        height: 70px;
+  
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+  
+  // Navigation Dots Styles
+  .app__navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    position: fixed;
+    right: 2rem;
+    bottom: 50%;
+    transform: translateY(50%);
+    z-index: 2;
+  
+    .app__navigation-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #cbcbcb;
+      margin: 0.5rem;
+      transition: background-color 0.2s ease-in-out;
+  
+      &:hover {
+        background-color: var(--secondary-color);
+      }
+  
+      @media screen and (min-width: 2000px) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .app__navigation,
+    .app__social {
+      display: none;
+    }
+  }
+  // src/App.scss
+  :root {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --card-bg: #ffffff;
+  }
+
+  body.dark-mode {
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+    --card-bg: #2d2d2d;
+  }
+
+.app {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+// Add styles for the theme toggle button
+.theme-toggle {
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  
+  svg {
+    font-size: 1.2rem;
+    color: var(--text-color);
+  }
+}

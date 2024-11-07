@@ -1,0 +1,229 @@
+.app__skills.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+.app__skills {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+    &.dark-mode {
+      background-color: #1a1a1a;
+      color: #ffffff;
+  
+      .head-text {
+        color: #ffffff;
+      }}
+  }
+  
+  .app__skills-container {
+    width: 80%;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+  
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+  
+  .app__skills-list {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  
+    margin-right: 5rem;
+  
+    @media screen and (max-width: 900px) {
+      margin-right: 0;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  .app__skills-item {
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem;
+  
+    transition: all 0.3s ease-in-out;
+  
+    div {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background-color: #fcf7f7;
+      .dark-mode & {
+        background-color: #2a2a2a;
+      }
+  
+      &:hover {
+        box-shadow: 0 0 25px #b1afaf;
+  
+        .dark-mode & {
+          box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+        }
+      }
+  
+      img {
+        width: 50%;
+        height: 50%;
+      }
+  
+      &:hover {
+        box-shadow: 0 0 25px #b1afaf;
+      }
+  
+      @media screen and (min-width: 2000px) {
+        width: 150px;
+        height: 150px;
+      }
+  
+      @media screen and (max-width: 450px) {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  
+    p {
+      font-weight: 500;
+      margin-top: 0.5rem;
+      .dark-mode & {
+        color: #e0e0e0;
+      }
+    }
+  
+    @media screen and (min-width: 2000px) {
+      margin: 1rem 2rem;
+  
+      p {
+        margin-top: 1rem;
+      }
+    }
+  }
+  
+  .app__skills-exp {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 2rem; // Added margin-top for spacing
+    .dark-mode & {
+      background: #2a2a2a;
+      box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+    }
+  
+    &:hover {
+      .dark-mode & {
+        box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+      }}
+  
+    @media screen and (max-width: 900px) {
+      margin-top: 2rem;
+    }
+  }
+  
+  .app__skills-exp-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 8px; // Rounded corners for experience items
+    background: #ffffff; // White background for experience items
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Soft shadow for depth
+    transition: box-shadow 0.3s; // Transition for hover effect
+  
+    &:hover {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); // Deeper shadow on hover
+    }
+  }
+  
+  .app__skills-exp-year {
+    margin-right: 2rem;
+  
+    p {
+      font-weight: 800;
+      color: #007bff; // Blue color for years
+      font-size: 1.5rem; // Larger font size for emphasis
+      margin-bottom: 0.5rem; // Space below the year
+      .dark-mode & {
+        color: #4da8ff;
+      }
+    }
+  }
+  
+  .app__skills-exp-works {
+    flex: 1;
+    display: flex;
+    flex-direction: column; // Stack works vertically
+    gap: 0.5rem; // Space between works
+  
+    .app__skills-exp-work {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-bottom: 0.5rem; // Space below each work item
+      padding: 0.5rem; // Padding for each work item
+      border-left: 4px solid #007bff; // Left border for visual distinction
+      transition: background 0.2s; // Transition for background change
+      .dark-mode & {
+        border-left: 4px solid #4da8ff;
+      }
+  
+      &:hover {
+        .dark-mode & {
+          background: rgba(77, 168, 255, 0.1);
+        }}
+  
+      &:hover {
+        background: rgba(0, 123, 255, 0.1); // Light blue background on hover
+      }
+  
+      h4 {
+        font-weight: 600; // Slightly bolder font for work names
+        color: #333; // Dark text for work names
+        .dark-mode & {
+          color: #e0e0e0;
+        }
+      }
+  
+      p {
+        font-weight: 400;
+        color: #777; // Gray color for company names
+        margin-top: 2px; // Space above company names
+        .dark-mode & {
+          color: #b0b0b0;
+        }
+      }
+    }
+  }
+  
+  .skills-tooltip {
+    max-width: 300px !important;
+    background-color: var(--white-color) !important;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 5px !important;
+    padding: 1rem !important;
+    color: var(--gray-color) !important;
+    text-align: center !important;
+    line-height: 1.5 !important;
+    opacity: 1 !important;
+    .dark-mode & {
+      background-color: #2a2a2a !important;
+      color: #e0e0e0 !important;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.1) !important;
+    }
+  
+    @media screen and (min-width: 2000px) {
+      font-size: 1.75rem !important;
+      max-width: 500px !important;
+      line-height: 2 !important;
+    }
+  }
